@@ -1,15 +1,14 @@
 # Intelligent Timetable Scheduler
 
-AI-assisted TDD coursework submission. See `Software_Unit_Testing_Report.docx` for the full
-report (requirements, test design, development process, evaluation, testing results, reflection).
+AI-assisted TDD coursework submission by Iresh Maharjan. See `PRT582 Software Unit Testing Report(1).docx` for the full report (requirements, test design, development process, evaluation, testing results, reflection).
 
 ## Structure
 
-```
+```text
 .
 ├── README.md
 ├── pytest.ini                          # lets tests import source/scheduler.py directly
-├── Software_Unit_Testing_Report.docx   # the full report
+├── PRT582 Software Unit Testing Report(1).docx   # the full report
 ├── source/
 │   └── scheduler.py                    # the application
 └── tests/
@@ -35,8 +34,7 @@ python3 -m pytest tests/ -v
 python3 -m pytest tests/ --cov=scheduler --cov-report=term-missing
 ```
 
-Expected result: **31 passed**, **95% coverage** on `scheduler.py` (the three small gaps are
-explained in Section 14 of the report — they're a documented limitation, not an oversight).
+Expected result: **31 passed**, **95% coverage** on `scheduler.py` (the three small gaps are explained in the report — they're a documented limitation, not an oversight).
 
 ## Using the scheduler
 
@@ -52,25 +50,9 @@ result = generate_timetable(courses, rooms, lecturers, timeslots)
 print(result.is_feasible, result.assignments, result.conflicts, result.quality_score)
 ```
 
-## Publishing this to GitHub
+## GitHub Repository
 
-This wasn't pushed to a repository automatically — that needs your own GitHub account. From
-this folder:
+This repository is hosted at:
+`https://github.com/Eresh24/intelligent-timetable-scheduler.git`
 
-```bash
-git init
-git add .
-git commit -m "Intelligent Timetable Scheduler: AI-assisted TDD submission"
-```
-
-Then create an empty repository on github.com (no README/license, so it stays empty), and:
-
-```bash
-git remote add origin https://github.com/<your-username>/<your-repo-name>.git
-git branch -M main
-git push -u origin main
-```
-
-Copy the resulting `https://github.com/<your-username>/<your-repo-name>` URL into the report
-wherever it asks for the GitHub repository link (Section 14, Testing Results, and the
-submission coversheet if your course uses one) before you hand it in.
+This URL is also included in the final PDF report.
